@@ -9,7 +9,13 @@
       <dd><%= @match.number %></dd>
 
       <dt>Course</dt>
-      <dd><%= @match.course_id %></dd>
+      <dd>
+        <% if @match.course.present? %>
+          <a href="/courses/<%= @match.course_id %>">
+            <%= @match.course.name %>
+          </a>
+        <% end %>
+      </dd>
 
     </dl>
 

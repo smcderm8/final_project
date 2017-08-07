@@ -26,8 +26,20 @@
         <td><%= player.name %></td>
         <td><%= player.phone_number %></td>
         <td><%= player.handicap_index %></td>
-        <td><%= player.match.number %></td>
-        <td><%= player.team.name %></td>
+        <td>
+          <% if player.match.present? %>
+            <a href="/matches/<%= player.match.id %>">
+              <%= player.match.number %>
+            </a>
+          <% end %>
+        </td>
+        <td>
+          <% if player.team.present? %>
+            <a href="/teams/<%= player.team.id %>">
+              <%= player.team.name %>
+            </a>
+          <% end %>
+        </td>
         <td>
           <a href="/players/<%= player.id %>" class="btn btn-primary">Show</a>
         </td>
