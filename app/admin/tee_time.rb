@@ -1,5 +1,7 @@
 ActiveAdmin.register TeeTime do
 
+ permit_params :time, :team_id, :match_id, :player_id
+
 # See permitted parameters documentation:
 # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
 #
