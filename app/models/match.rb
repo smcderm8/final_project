@@ -11,6 +11,10 @@ class Match < ApplicationRecord
 
   # Indirect associations
 
+  has_many   :teams,
+             :through => :tee_times,
+             :source => :team
+
   # Validations
 
 end
