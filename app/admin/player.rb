@@ -1,6 +1,6 @@
 ActiveAdmin.register Player do
 
- permit_params :email, :password, :name, :phone_number, :handicap_index, :match_id, :team_id
+ permit_params :name, :phone_number, :handicap_index, :match_id, :team_id
 
 # See permitted parameters documentation:
 # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
