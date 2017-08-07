@@ -6,6 +6,8 @@ class MatchesController < ApplicationController
   end
 
   def show
+    @tee_time = TeeTime.new
+    @player = Player.new
     @match = Match.find(params[:id])
 
     render("matches/show.html.erb")
