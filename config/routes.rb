@@ -1,4 +1,11 @@
 Rails.application.routes.draw do
+  devise_for :players
+  # Routes for the Player resource:
+  # READ
+  get "/players", :controller => "players", :action => "index"
+  get "/players/:id", :controller => "players", :action => "show"
+
+
   # Routes for the Team resource:
   # CREATE
   get "/teams/new", :controller => "teams", :action => "new"
