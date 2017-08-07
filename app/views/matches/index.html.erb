@@ -17,7 +17,7 @@
       <% @matches.each do |match| %>
       <tr>
         <td><%= match.number %></td>
-        <td><%= match.course_id %></td>
+        <td><%= match.course.name %></td>
         <td>
           <a href="/matches/<%= match.id %>" class="btn btn-primary">Show</a>
           <a href="/matches/<%= match.id %>/edit" class="btn btn-warning">Edit</a>
