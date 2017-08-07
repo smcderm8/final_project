@@ -1,6 +1,9 @@
 class Player < ApplicationRecord
   # Direct associations
 
+  belongs_to :match,
+             :counter_cache => true
+
   has_many   :tee_times,
              :dependent => :destroy
 
